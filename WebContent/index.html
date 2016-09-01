@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+</head>
+<body>
+	<h1 align="center">Jobs</h1>
+	<h2 align="center">Index of Global Linguistic Job Openings</h2>
+	
+	<!-- List all Jobs -->
+	<form align="center" action="GetJobs.do" method="GET">
+		<input type="submit" value="List All Jobs" name="go"><br>
+	</form>
+	
+		<!-- Search Jobs by Employer -->
+	<form  align="center" action="GetJobs.do" method="GET">
+		<input type="submit" value="Search by Employer" name="emp">   <input type="text" name="empText"> <br>
+	</form>
+	
+		<!-- Search Jobs by Location -->
+	<form align="center" action="GetJobs.do" method="GET">
+		<input type="submit" value="Search by Location" name="loc">   <input type="text" name="locText" value=""> <br>
+	</form>
+	
+		<!-- Search Jobs by Title -->
+	<form align="center" action="GetJobs.do" method="GET">
+		<input type="submit" value="Search by Title" name="tit">    <input type="text" name="titText" value=""> <br>
+	</form>
+	
+		<!-- Search Jobs by Specialty -->
+	<form align="center" action="GetJobs.do" method="GET">
+		<input type="submit" value="Search by Specialty" name="spec">    <input type="text" name="specText" value=""> <br>
+	</form>
+	
+	
+		<!-- Add a New Job -->
+	<form align="center" action="addJob.do" method="GET">
+		<input type="submit" value="Add New Job" name="addJob">
+	</form>
+	
+		<!-- Edit Jobs -->
+	<form align="center" action="editJob.do" method="GET">
+		<input type="submit" value="Update/Delete Listing" name="delete">
+	</form>
+	
+
+</body>
+</html>
