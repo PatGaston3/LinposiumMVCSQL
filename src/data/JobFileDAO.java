@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.WebApplicationContext;
 
 public class JobFileDAO implements JobDAO {
-	private static final String FILE_NAME="/WEB-INF/jobs.csv";
+	private static final String FILE_NAME="/WEB-INF/jobs2.csv";
 	private List<Job> jobs = new ArrayList<>();
 	/*
 	 * Use Autowired to have Spring inject an instance
@@ -44,11 +44,11 @@ public class JobFileDAO implements JobDAO {
 				String location = tokens[1];
 				String title = tokens[2];
 				String specialty = tokens[3];
-				String deadline = tokens[4];
-				String datePosted = tokens[5];
+				String datePosted = tokens[4];
+				String deadline = tokens[5];
+				String website = tokens[6];
 				id = Math.random() * 1000;
-//				String description = tokens[6];
-				jobs.add(new Job(employer, location, title, specialty, deadline, datePosted, id));
+				jobs.add(new Job(employer, location, title, specialty, deadline, datePosted, website, id));
 			}
 		} catch (Exception e) {
 			System.err.println(e);
@@ -60,13 +60,14 @@ public class JobFileDAO implements JobDAO {
 		return jobs;
 	}
 	
-	public void updateJob(Job job, String employer, String location, String title, String specialty, String deadline, String datePosted) {
+	public void updateJob(Job job, String employer, String location, String title, String specialty, String deadline, String website, String datePosted) {
 		job.setEmployer(employer);
 		job.setLocation(location);
 		job.setTitle(title);
 		job.setSpecialty(specialty);
 		job.setDeadline(deadline);
 		job.setDatePosted(datePosted);
+		job.setWebsite(website);
 	}
 	
 	@Override

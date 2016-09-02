@@ -7,22 +7,22 @@ public class Job {
 	private String specialty;
 	private String deadline;
 	private String datePosted;
+	private String website;
 	private double id;
-//	private String description;
 
 	public Job() {
 		this.id = Math.random() * 1000;
 	}
 	
-	public Job(String employer, String location, String title, String specialty, String deadline, String datePosted, double id) {
+	public Job(String employer, String location, String title, String specialty, String deadline, String datePosted, String website, double id) {
 		this.employer = employer;
 		this.location = location;
 		this.title = title;
 		this.specialty = specialty;
 		this.deadline = deadline;
 		this.datePosted = datePosted;
+		this.website = website;
 		this.id = id;
-//		this.description = description;
 	}
 
 	public String getEmployer() {
@@ -46,6 +46,9 @@ public class Job {
 	public double getId() {
 		return id;
 	}
+	public String getWebsite() {
+		return website;
+	}
 
 	public void setEmployer(String employer) {
 		this.employer = employer;
@@ -67,6 +70,9 @@ public class Job {
 	}
 	public void setId(double id) {
 		this.id = id;
+	}
+	public void setWebsite(String website) {
+		this.website = website;
 	}
 
 	@Override

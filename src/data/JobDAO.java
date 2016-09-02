@@ -11,5 +11,5 @@ public interface JobDAO {
 	void addJob(Job job);
 	Job getJobById(double id);
 	void removeJob(Job job);
-	void updateJob(Job job, String employer, String location, String title, String specialty, String deadline, String datePosted);
+	void updateJob(Job job, String employer, String location, String title, String specialty, String deadline, String website, String datePosted);
 }

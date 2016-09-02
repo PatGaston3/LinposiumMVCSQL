@@ -17,15 +17,6 @@ public class JobController {
 	@Autowired
 	private JobDAO jobDao;
 
-/*	@RequestMapping(path = "decision.do", params = "previoius", method = RequestMethod.GET)
-	public ModelAndView getById(@RequestParam("previous") String previous) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("result2.jsp");
-		mv.addObject("state", jobDao.getStateById(previous));
-		return mv;
-	}
-*/	
-
 	// GET ALL JOBS
 	@RequestMapping(path = "GetJobs.do", params = "go", method = RequestMethod.GET)
 	public ModelAndView getJobs() {
@@ -37,7 +28,7 @@ public class JobController {
 	
 	// GET JOBS BY EMPLOYER
 	@RequestMapping(path = "GetJobs.do", params = "emp", method = RequestMethod.GET)
-	public ModelAndView getByEmployer(@RequestParam("empText") String a) {
+	public ModelAndView getByEmployer(@RequestParam("input") String a) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
 		mv.addObject("jobs", jobDao.getJobsByEmployer(a));
@@ -46,7 +37,7 @@ public class JobController {
 	
 	// GET JOBS BY LOCATION
 	@RequestMapping(path = "GetJobs.do", params = "loc", method = RequestMethod.GET)
-	public ModelAndView getByLocation(@RequestParam("locText") String a) {
+	public ModelAndView getByLocation(@RequestParam("input") String a) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
 		mv.addObject("jobs", jobDao.getJobsByLocation(a));
@@ -55,7 +46,7 @@ public class JobController {
 	
 	// GET JOBS BY TITLE
 	@RequestMapping(path = "GetJobs.do", params = "tit", method = RequestMethod.GET)
-	public ModelAndView getByTitle(@RequestParam("titText") String a) {
+	public ModelAndView getByTitle(@RequestParam("input") String a) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
 		mv.addObject("jobs", jobDao.getJobsByTitle(a));
@@ -64,7 +55,7 @@ public class JobController {
 	
 	// GET JOBS BY SPECIALTY
 	@RequestMapping(path = "GetJobs.do", params = "spec", method = RequestMethod.GET)
-	public ModelAndView getBySpecialty(@RequestParam("specText") String a) {
+	public ModelAndView getBySpecialty(@RequestParam("input") String a) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
 		mv.addObject("jobs", jobDao.getJobsBySpecialty(a));
@@ -125,10 +116,11 @@ public class JobController {
 								@RequestParam("title") String title,
 								@RequestParam("specialty") String specialty,
 								@RequestParam("deadline") String deadline,
-								@RequestParam("datePosted") String datePosted){
+								@RequestParam("datePosted") String datePosted,
+								@RequestParam("website") String website){
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
-		jobDao.updateJob(jobDao.getJobById(num), employer, location, title, specialty, deadline, datePosted);
+		jobDao.updateJob(jobDao.getJobById(num), employer, location, title, specialty, deadline, datePosted, website);
 		mv.addObject("jobs", jobDao.getJobs());
 		return mv;
 	}
