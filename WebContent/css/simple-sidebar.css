@@ -22,7 +22,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: #03099e;
+ 	background: #000000;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -38,6 +38,21 @@
     position: absolute;
     padding: 15px;
 }
+
+#small-font {
+	color: black;
+}
+
+.home-bg {
+	background-image: url("../img/bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: 150%;
+}
+
+.page-bg {
+	background-color: #E3E3E3;
+}
+
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
