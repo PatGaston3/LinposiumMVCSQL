@@ -14,7 +14,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Lonposium Update Job</title>
+<title>Linposium Update Job</title>
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/simple-sidebar.css" rel="stylesheet">
@@ -40,10 +40,10 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
+					<a href="#menu-toggle" id="menu-toggle"><button type="submit" class="btn btn-primary">
+    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                                        </button></a>
 						<h1>Update Job</h1>
-
-						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle
-							Menu</a>
 
 						<!-- Spacing -->
 						<br> <br> <br>
@@ -91,7 +91,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 									<br></td>
 								<tr>
 								<tr>
-									<td><input type="submit" value="Update Job" name="newJob"></td>
+									<td><input class="btn btn-default" type="submit" value="Update Job" name="newJob"></td>
 								</tr>
 							</table>
 						</form>

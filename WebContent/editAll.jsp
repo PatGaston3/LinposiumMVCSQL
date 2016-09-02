@@ -40,10 +40,10 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
+					<a href="#menu-toggle" id="menu-toggle"><button type="submit" class="btn btn-primary">
+    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                                        </button></a>
 						<h1>Update/Edit Jobs</h1>
-						
-							<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle
-							Menu</a>
 
 						<!-- Spacing -->
 						<br> <br> <br>
@@ -69,12 +69,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 									<td>${job.datePosted}</td>
 									<td><a href="${job.website}">View / Apply</a></td>
 									<form action="change.do" method="GET">
-										<td><input type="submit" value="Delete"></td>
-										<td><input type="hidden" class="btn btn-default" value="${job.id}" name="id"></td>
+										<td><input type="hidden" value="Delete"></td>
+										<td><input type="hidden" class="btn btn-default" value="${job.id}" name="id">
+										<button type="submit" class="btn btn-primary">
+    <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+                                        </button></td>
 									</form>
 									<form action="update.do" method="GET">
-										<td><input type="submit" value="Update"></td>
-										<td><input type="hidden" class="btn btn-default" value="${job.id}" name="id"></td>
+										<td><input type="hidden" value="Update"></td>
+										<td><input type="hidden" class="btn btn-default" value="${job.id}" name="id"><button type="submit" class="btn btn-default">
+    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span></td>
 									</form>
 							</c:forEach>
 							</tr>

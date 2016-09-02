@@ -10,6 +10,14 @@
     transition: all 0.5s ease;
 }
 
+.footOne {
+	background-color: #02005C;
+	color: white;
+	font-style: italic;
+	font-family:fantasy;
+	font-size: 20px;
+}
+
 #wrapper.toggled {
     padding-left: 250px;
 }
@@ -22,7 +30,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
- 	background: #000000;
+ 	background: #02005C;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -44,9 +52,9 @@
 }
 
 .home-bg {
-	background-image: url("../img/bg1.jpg");
-	background-repeat: no-repeat;
-	background-size: 150%;
+	background-image: url("../img/bg1.jpeg");
+ 	background-repeat: no-repeat; 
+	background-size: 100%;
 }
 
 .page-bg {
@@ -118,6 +126,7 @@
 
     #sidebar-wrapper {
         width: 250px;
+    /*     height: 541px; */
     }
 
     #wrapper.toggled #sidebar-wrapper {

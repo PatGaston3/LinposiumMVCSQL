@@ -108,7 +108,7 @@ public class JobController {
 		return mv;
 	}
 	
-	// UPDATE JOB INITIAL SCREEN
+	// UPDATE JOB SCREEN
 	@RequestMapping(path = "updatedJob.do", method = RequestMethod.GET)
 	public ModelAndView doneJob(@RequestParam("id") double num, 
 								@RequestParam("employer") String employer, 

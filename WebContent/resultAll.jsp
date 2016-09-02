@@ -41,11 +41,11 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
+					<a href="#menu-toggle" id="menu-toggle"><button type="submit" class="btn btn-primary">
+    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                                        </button></a>
 						<h1>All Jobs</h1>
 
-
-						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle
-							Menu</a>
 
 						<!-- Spacing -->
 						<br> <br> <br>
@@ -66,7 +66,7 @@
 
 						<!-- Spacing -->
 						<br> <br> <br>
-
+				<div class="table-resp">
 						<table width="100%">
 							<thead>
 								<th><b>Employer:</b></th>
@@ -85,10 +85,13 @@
 									<td>${job.specialty}</td>
 									<td>${job.datePosted}</td>
 									<td>${job.deadline}</td>
-									<td><a href="${job.website}">View / Apply</a></td>
+									<td><a href="${job.website}"><button type="submit" class="btn btn-primary">
+    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </button></a></td>
 							</c:forEach>
 							</tr>
 						</table>
+				</div>
 
 
 
