@@ -30,7 +30,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav">
 					<li class="sidebar-brand"><a
-					href="http://localhost:8080/Linposium/index.html"><img src="img/small-logo.png"/></a>
+					href="index.html"><img src="img/small-logo.png"/></a>
 				</li>
 			</ul>
 		</div>

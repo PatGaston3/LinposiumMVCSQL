@@ -125,4 +125,17 @@ public class JobController {
 		return mv;
 	}
 	
+	// CHECK PASSWORD SCREEN
+	@RequestMapping(path = "checkPassword.do", method = RequestMethod.GET)
+	public ModelAndView checkPassword(@RequestParam("password") String password) {
+		ModelAndView mv = new ModelAndView();
+		if (password.equals("skilled")) {
+			mv.setViewName("main.html");			
+			return mv;
+		}
+		else {
+			mv.setViewName("wrongPassword.html");
+			return mv;
+		}
+	}
 }

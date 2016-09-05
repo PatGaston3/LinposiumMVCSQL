@@ -25,11 +25,11 @@
 		<div id="sidebar-wrapper">
 			<ul class="sidebar-nav">
 				<li class="sidebar-brand"><a
-					href="http://localhost:8080/Linposium/index.html"><img
+					href="index.html"><img
 						src="img/small-logo.png" /></a></li>
 				<li>
 					<ul>
-						<font color="white"><h4>Linguists</h4></font>
+						<font color="white"><h3>Linguists</h3></font>
 						<li>
 							<form action="GetJobs.do" method="GET">
 								<input type="submit" class="btn btn-default"
@@ -42,17 +42,15 @@
 				<br>
 				<li>
 					<ul>
-						<font color="white"><h4>Employers</h4></font>
+						<font color="white"><h3>Employers</h3></font>
+								<font color="white"><h4>Password:</h4></font>
+							<form action="checkPassword.do" method="GET">
+								<input type="password" name="password">
 						<li>
-							<form action="addJob.do" method="GET">
-								<input type="submit" class="btn btn-default" value="Add New Job"
-									name="addJob">
-							</form>
-
-							<form action="editJob.do" method="GET">
 								<input type="submit" class="btn btn-default"
-									value="Update/Delete Listing" name="delete">
+									value="Add/Update listing">
 							</form>
+						</li>
 					</ul>
 				</li>
 
