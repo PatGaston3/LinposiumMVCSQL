@@ -15,7 +15,7 @@ Start the program by:
 <ul>
   <p>&#x00B7 Upon loading, you will be brought to a main screen with options.</br>
    &#x00B7 You can view List of Jobs as a "linguist" or, </br>
-   &#x00B7 Update existing/add new jobs to the database</br>
+   &#x00B7 Update existing/add new jobs to the database  <b>PASSWORD FOR EMPLOYERS: <i>skilled</i></b></br>
    &#x00B7 <strong>    In the List of Jobs.......</strong></br>
    &#x00B7 you can choose to search by employer, location, title, or specialty</br>
     </p>
