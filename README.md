@@ -21,4 +21,25 @@ Start the program by:
     </p>
 </ul>
 
+
+--------------
+
+### Technologies Used
+<ul>
+<li>Spring MVC</li>
+<li>Bootstrap</li>
+</ul>
+
+
+### Add in the future
+<ul>
+<li>Allow the database to update itself by doing an auto-search on a search engine for relevant jobs</li>
+</ul>
+
+
+### Stumbling points
+<ul>
+<li>Communicating with controllers</li>
+</ul>
+
 ######Patrick Gaston
