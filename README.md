@@ -11,7 +11,7 @@ Start the program by:
 <li>1.) Opening the Program as an Eclipse project and run on server.</li>
 <li>2.) Running as .jar file from your machine</li>
 <li>3.) Opening file and running "index.html" from directory *Path = /Linposium/WebContent/index.html"*</li>
-<li>4.) visit www.patgaston.com:8080/Linposium </li>
+<li>4.) visiting www.patgaston.com:8080/Linposium </li>
 </ul>
 <ul>
   <p>&#x00B7 Upon loading, you will be brought to a main screen with options.</br>
