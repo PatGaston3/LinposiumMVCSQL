@@ -1,6 +1,6 @@
 # Linposium
 
-Week 7 SKill Distillery Project -
+Week 8 SKill Distillery Project -
 Linposium is a Computational Linguistics Jobs Database.
 
 --------------
@@ -29,6 +29,7 @@ Start the program by:
 <ul>
 <li>Spring MVC</li>
 <li>Bootstrap</li>
+<li>SQL, MySQL</li>
 </ul>
 
 
