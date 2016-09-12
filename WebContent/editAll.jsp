@@ -62,7 +62,7 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 							<c:forEach var="job" items="${jobs}">
 								<tr>
 									<td>${job.employer}</td>
-									<td>${job.location}</td>
+									<td>${job.city}, ${job.state}</td>
 									<td>${job.title}</td>
 									<td>${job.specialty}</td>
 									<td>${job.deadline}</td>

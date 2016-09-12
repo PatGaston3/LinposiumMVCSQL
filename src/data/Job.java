@@ -1,35 +1,39 @@
 package data;
-
+	
 public class Job {
 	private String employer;
-	private String location;
+	private String city;
+	private String state;
 	private String title;
 	private String specialty;
 	private String deadline;
 	private String datePosted;
 	private String website;
-	private double id;
+	private int id;
 
 	public Job() {
-		this.id = Math.random() * 1000;
 	}
 	
-	public Job(String employer, String location, String title, String specialty, String deadline, String datePosted, String website, double id) {
+	public Job(int id, String employer, String city, String state, String title, String specialty, String deadline, String datePosted, String website) {
+		this.id = id;
 		this.employer = employer;
-		this.location = location;
+		this.city = city;
+		this.state = state;
 		this.title = title;
 		this.specialty = specialty;
 		this.deadline = deadline;
 		this.datePosted = datePosted;
 		this.website = website;
-		this.id = id;
 	}
 
 	public String getEmployer() {
 		return employer;
 	}
-	public String getLocation() {
-		return location;
+	public String getCity() {
+		return city;
+	}
+	public String getState() {
+		return state;
 	}
 	public String getTitle() {
 		return title;
@@ -43,7 +47,7 @@ public class Job {
 	public String getDatePosted() {
 		return datePosted;
 	}
-	public double getId() {
+	public int getId() {
 		return id;
 	}
 	public String getWebsite() {
@@ -53,8 +57,11 @@ public class Job {
 	public void setEmployer(String employer) {
 		this.employer = employer;
 	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	public void setTitle(String title) {
 		this.title = title;
@@ -68,7 +75,7 @@ public class Job {
 	public void setDatePosted(String datePosted) {
 		this.datePosted = datePosted;
 	}
-	public void setId(double id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public void setWebsite(String website) {
@@ -77,7 +84,7 @@ public class Job {
 
 	@Override
 	public String toString() {
-		return "Job [employer=" + employer + ", location=" + location + ", title=" + title + "]";
+		return "Job [employer=" + employer + ", city=" + city + ", title=" + title + "]";
 	}
 
 }

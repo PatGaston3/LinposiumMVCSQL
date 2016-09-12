@@ -53,11 +53,7 @@
 						<form action="GetJobs.do" method="GET">
 							<input size="150" type="text" name="input"> <br> <input
 								type="submit" class="btn btn-default" value="Search by Employer"
-								name="emp"> <input type="submit" class="btn btn-default"
-								value="Search by Location" name="loc"> <input
-								type="submit" class="btn btn-default" value="Search by Title"
-								name="tit"> <input type="submit" class="btn btn-default"
-								value="Search by Specialty" name="spec">
+								name="emp"> 
 						</form>
 						<form action="GetJobs.do" method="GET">
 							<input type="submit" class="btn btn-default"
@@ -71,7 +67,7 @@
 							<thead>
 								<th><b>Employer:</b></th>
 								<th><b>Location:</b></th>
-								<th><b>Title:</b></th>
+								<th><b>title:</b></th>
 								<th><b>Specialty:</b></th>
 								<th><b>Date Posted:</b></th>
 								<th><b>Deadline:</b></th>
@@ -80,7 +76,7 @@
 							<c:forEach var="job" items="${jobs}">
 								<tr>
 									<td>${job.employer}</td>
-									<td>${job.location}</td>
+									<td>${job.city}, ${job.state}</td>
 									<td>${job.title}</td>
 									<td>${job.specialty}</td>
 									<td>${job.datePosted}</td>

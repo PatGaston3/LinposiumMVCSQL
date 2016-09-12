@@ -1,5 +1,6 @@
 package controllers;
 
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,33 +35,7 @@ public class JobController {
 		mv.addObject("jobs", jobDao.getJobsByEmployer(a));
 		return mv;
 	}
-	
-	// GET JOBS BY LOCATION
-	@RequestMapping(path = "GetJobs.do", params = "loc", method = RequestMethod.GET)
-	public ModelAndView getByLocation(@RequestParam("input") String a) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("resultAll.jsp");
-		mv.addObject("jobs", jobDao.getJobsByLocation(a));
-		return mv;
-	}
-	
-	// GET JOBS BY TITLE
-	@RequestMapping(path = "GetJobs.do", params = "tit", method = RequestMethod.GET)
-	public ModelAndView getByTitle(@RequestParam("input") String a) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("resultAll.jsp");
-		mv.addObject("jobs", jobDao.getJobsByTitle(a));
-		return mv;
-	}
-	
-	// GET JOBS BY SPECIALTY
-	@RequestMapping(path = "GetJobs.do", params = "spec", method = RequestMethod.GET)
-	public ModelAndView getBySpecialty(@RequestParam("input") String a) {
-		ModelAndView mv = new ModelAndView();
-		mv.setViewName("resultAll.jsp");
-		mv.addObject("jobs", jobDao.getJobsBySpecialty(a));
-		return mv;
-	}
+
 	
 	// ADD JOB SCREEN
 	@RequestMapping(path = "addJob.do", method = RequestMethod.GET)
@@ -72,10 +47,18 @@ public class JobController {
 	
 	// ADD JOB SCREEN
 	@RequestMapping(path = "jobCompleted.do", method = RequestMethod.GET)
-	public ModelAndView completeJob(Job j) {
+	public ModelAndView completeJob(@RequestParam("id") int num, 
+									@RequestParam("employer") String employer, 
+									@RequestParam("city") String city,
+									@RequestParam("state") String state,
+									@RequestParam("title") String title,
+									@RequestParam("specialty") String specialty,
+									@RequestParam("deadline") String deadline,
+									@RequestParam("datePosted") String datePosted,
+									@RequestParam("website") String website){
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
-		jobDao.addJob(j);
+		jobDao.addJob(num, employer, city, state, title, datePosted, deadline, specialty, website);
 		mv.addObject("jobs", jobDao.getJobs());
 		return mv;
 	}
@@ -91,17 +74,18 @@ public class JobController {
 	
 	// DELETE JOB
 	@RequestMapping(path = "change.do", method = RequestMethod.GET)
-	public ModelAndView editJob(@RequestParam("id") double num) {
+	public ModelAndView editJob(@RequestParam("id") int num) {
+		System.out.println("im here");
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("editAll.jsp");
-		jobDao.removeJob(jobDao.getJobById(num));
+		jobDao.removeJob(num);
 		mv.addObject("jobs", jobDao.getJobs());
 		return mv;
 	}
 	
 	// UPDATE JOB INITIAL SCREEN
 	@RequestMapping(path = "update.do", method = RequestMethod.GET)
-	public ModelAndView updateJob(@RequestParam("id") double num) {
+	public ModelAndView updateJob(@RequestParam("id") int num) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("updateJob.jsp");
 		mv.addObject("job", jobDao.getJobById(num));
@@ -110,9 +94,10 @@ public class JobController {
 	
 	// UPDATE JOB SCREEN
 	@RequestMapping(path = "updatedJob.do", method = RequestMethod.GET)
-	public ModelAndView doneJob(@RequestParam("id") double num, 
+	public ModelAndView doneJob(@RequestParam("id") int num, 
 								@RequestParam("employer") String employer, 
-								@RequestParam("location") String location,
+								@RequestParam("city") String city,
+								@RequestParam("state") String state,
 								@RequestParam("title") String title,
 								@RequestParam("specialty") String specialty,
 								@RequestParam("deadline") String deadline,
@@ -120,7 +105,8 @@ public class JobController {
 								@RequestParam("website") String website){
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("resultAll.jsp");
-		jobDao.updateJob(jobDao.getJobById(num), employer, location, title, specialty, deadline, datePosted, website);
+		System.out.println(jobDao.getJobById(num));
+		jobDao.updateJob(num, employer, city, state, title, specialty, deadline, datePosted, website);
 		mv.addObject("jobs", jobDao.getJobs());
 		return mv;
 	}

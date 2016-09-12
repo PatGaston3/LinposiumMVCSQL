@@ -51,13 +51,23 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 						<form action="updatedJob.do" method="GET">
 							<table width="100%" >
 								<tr>
+									<td><br> <input size="150" type="text"
+										value="${job.id}" name="id"><br>
+									<br></td>
+								</tr>
+								<tr>
 									<td>Employer: <br> <input size="150" type="text"
 										value="${job.employer}" name="employer"><br>
 									<br></td>
 								</tr>
 								<tr>
-									<td>Location: <br> <input size="150" type="text"
-										value="${job.location}" name="location"><br>
+									<td>City: <br> <input size="150" type="text"
+										value="${job.city}" name="city"><br>
+									<br></td>
+								</tr>
+								<tr>
+									<td>State: <br> <input size="150" type="text"
+										value="${job.state}" name="state"><br>
 									<br></td>
 								</tr>
 								<tr>
@@ -79,17 +89,12 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 									<td>Today's Date: <br> <input size="150" type="text"
 										value="${job.datePosted}" name="datePosted"><br>
 									<br></td>
-								<tr>
+								</tr>
 								<tr>
 									<td>Website: <br> <input size="150" type="text"
 										value="${job.website}" name="website"><br>
 									<br></td>
-								<tr>
-								<tr>
-									<td>Today's Date: <br> <input size="150" type="hidden"
-										value="${job.id}" name="id"><br>
-									<br></td>
-								<tr>
+								</tr>
 								<tr>
 									<td><input class="btn btn-default" type="submit" value="Update Job" name="newJob"></td>
 								</tr>

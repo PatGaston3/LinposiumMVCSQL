@@ -50,10 +50,16 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<form action="jobCompleted.do" method="GET">
 	<table width="100%" >
 		<tr>
+			<td><b>Id:</b> <br> <input size="150" type="text" placeholder="ex: 206" name="id"><br><br></td>
+		</tr>
+		<tr>
 			<td><b>Employer:</b> <br> <input size="150" type="text" placeholder="Employer" name="employer"><br><br></td>
 		</tr>
 		<tr>
-			<td><b>Location: </b> <br>   <input size="150" type="text" placeholder="Location ('state','country')" name="location"><br><br></td>
+			<td><b>City: </b> <br>   <input size="150" type="text" placeholder="City" name="city"><br><br></td>
+		</tr>
+		<tr>
+			<td><b>State: </b> <br>   <input size="150" type="text" placeholder="State" name="state"><br><br></td>
 		</tr>
 		<tr>
 			<td><b>Job Title: </b><br>   <input size="150" type="text" placeholder="Job Title" name="title"><br><br></td>
@@ -62,13 +68,13 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 			<td><b>Specialty:</b> <br>   <input size="150" type="text" placeholder="Specialty (ex: Computational Linguistics; English; etc.)" name="specialty"><br><br></td>
 		</tr>
 		<tr>
-			<td><b>Deadline: </b> <br>    <input size="150" type="text" placeholder="deadline (ex: Aug-22-2016)" name="deadline"><br><br></td>
+			<td><b>Deadline: </b> <br>    <input size="150" type="text" placeholder="deadline (2016-01-01)" name="deadline"><br><br></td>
 		</tr>
 		<tr>
 			<td><b>Today's Date: </b><br> <input size="150" type="text" placeholder="datePosted (today's date)" name="datePosted"><br><br></td>
 		<tr>
 		<tr>
-			<td><b>Website: </b><br> <input size="150" type="text" placeholder="www." name="website"><br><br></td>
+			<td><b>Website: </b><br> <input size="150" type="text" placeholder="https://www." name="website"><br><br></td>
 		<tr>
 		<tr>
 			<td><input type="submit" class="btn btn-default" value="Add Job" name="newJob"></td>
