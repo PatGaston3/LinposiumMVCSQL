@@ -30,6 +30,7 @@ Start the program by:
 <li>Spring MVC</li>
 <li>Bootstrap</li>
 <li>SQL, MySQL</li>
+<li>JDBC</li>
 </ul>
 
 
@@ -41,7 +42,7 @@ Start the program by:
 
 ### Stumbling points
 <ul>
-<li>Communicating with controllers</li>
+<li>Using SQL Queries within Jdbc and understanding execution prepared statements pertaining to type of query</li>
 </ul>
 
 ######Patrick Gaston
